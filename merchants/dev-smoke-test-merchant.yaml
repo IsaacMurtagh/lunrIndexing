@@ -1,0 +1,31 @@
+tradingName: Dev Smoke Test Merchant
+country: NZ
+test: true
+paymentProfiles:
+  - id: 5f693f4b080872000653a182
+    accountId: 2FoEXneuRrWfMrBKAiDi2D
+    configs:
+      - id: 5f69407b986efa0007cb2e96
+        options:
+          - type: cca.coke.test
+          - type: centrapay.nzd.test
+            walletId: DbgY2SyD5M85zkePJjsQEf
+          - type: epay.nzd.test
+            terminalId: '11000021'
+      - id: 5fd198ee2fd9d300060db1f6
+        options:
+          - type: pocketvouchers
+      - id: 5fd19acb2fd9d300060db1f7
+        options:
+          - type: epay.nzd.main
+            terminalId: '11000021'
+      - id: 5fd19cb442ae280006fa292e
+        options:
+          - type: epay.nzd.test
+            terminalId: '11000021'
+      - id: 6009fe9ca76cdc000633d43c
+        options:
+          - type: zap.main
+      - id: 60e39c36dd69b20006b60310
+        options:
+          - type: test
