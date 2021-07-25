@@ -5,6 +5,12 @@ const createIndex = require('./createIndex');
 
 
 async function main() {
+  const searchArg = process.argv[2]
+  console.log(searchArg);
+  if (!searchArg) {
+    console.log('provide search argument');
+    return;
+  }
   if(!fs.existsSync('lunr-index.json')) {
     await createIndex();
   }
@@ -12,7 +18,7 @@ async function main() {
   const indexJson = JSON.parse(fs.readFileSync('lunr-index.json'));
   const index = lunr.Index.load(indexJson);
 
-  console.log(index.search('Mrs. Cindy Gutmann, Jaskolski')[0]);
+  console.log(index.search('Nepal'));
 }
 
 main();
