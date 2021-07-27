@@ -6,7 +6,6 @@ const createIndex = require('./createIndex');
 
 async function main() {
   const searchArg = process.argv[2]
-  console.log(searchArg);
   if (!searchArg) {
     console.log('provide search argument');
     return;
@@ -18,7 +17,7 @@ async function main() {
   const indexJson = JSON.parse(fs.readFileSync('lunr-index.json'));
   const index = lunr.Index.load(indexJson);
 
-  console.log(index.search('Nepal'));
+  console.log(index.search(searchArg));
 }
 
 main();
